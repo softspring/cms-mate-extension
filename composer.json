@@ -1,0 +1,80 @@
+{
+    "name": "softspring/cms-mate-extension",
+    "description": "AI Mate extension with read-only Armonic CMS content tools.",
+    "license": "proprietary",
+    "type": "symfony-ai-mate",
+    "keywords": [
+        "ai",
+        "cms",
+        "mate",
+        "mcp",
+        "softspring"
+    ],
+    "require": {
+        "php": ">=8.4",
+        "doctrine/orm": "^3.3",
+        "softspring/cms-bundle": "^6.0@dev",
+        "symfony/ai-mate": "^0.10",
+        "symfony/dependency-injection": "^6.4 || ^7.4 || ^8.0",
+        "symfony/dotenv": "^6.4 || ^7.4 || ^8.0",
+        "symfony/http-kernel": "^6.4 || ^7.4 || ^8.0"
+    },
+    "require-dev": {
+        "ergebnis/composer-normalize": "^2.50",
+        "friendsofphp/php-cs-fixer": "^3.94",
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^12.5",
+        "rector/rector": "^2.3",
+        "symfony/yaml": "^6.4 || ^7.4 || ^8.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Softspring\\CmsMateExtension\\": "src/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true
+        },
+        "sort-packages": true
+    },
+    "extra": {
+        "ai-mate": {
+            "includes": [
+                "config/config.php"
+            ],
+            "instructions": "INSTRUCTIONS.md",
+            "scan-dirs": [
+                "src/Capability"
+            ]
+        },
+        "branch-alias": {
+            "dev-6.0": "6.0.x-dev"
+        }
+    },
+    "scripts": {
+        "fix": [
+            "vendor/bin/rector process src tests",
+            "vendor/bin/php-cs-fixer fix --sequential",
+            "composer normalize"
+        ],
+        "run-tests": [
+            "composer validate --strict --no-check-lock --ansi",
+            "XDEBUG_MODE=coverage vendor/bin/phpunit",
+            "vendor/bin/rector process src tests --dry-run",
+            "vendor/bin/phpstan analyse src tests --level 5",
+            "vendor/bin/php-cs-fixer fix --dry-run --diff --sequential",
+            "vendor/bin/yaml-lint .github/ -vvv --parse-tags"
+        ],
+        "test": [
+            "composer update --no-scripts --ansi",
+            "@run-tests"
+        ],
+        "test-bc": [
+            "composer update --no-scripts --ansi --prefer-lowest --prefer-stable",
+            "@run-tests"
+        ]
+    }
+}
