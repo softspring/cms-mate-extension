@@ -14,6 +14,10 @@
 
 It lets local AI agents inspect configured CMS content types, search CMS content, and read a single CMS content item through the host Symfony application's kernel and Doctrine setup.
 
+## Documentation
+
+[Armonic documentation](https://armonic.softspring.es/6.0/components/cms-mate-extension)
+
 ## Installation
 
 ```bash
