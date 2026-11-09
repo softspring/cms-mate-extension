@@ -2,11 +2,11 @@
 
 [![Latest Stable](https://img.shields.io/packagist/v/softspring/cms-mate-extension?label=stable&style=flat-square)](https://github.com/softspring/cms-mate-extension/releases)
 [![Latest Unstable](https://img.shields.io/packagist/v/softspring/cms-mate-extension?label=unstable&style=flat-square&include_prereleases)](https://github.com/softspring/cms-mate-extension/releases)
-[![License](https://img.shields.io/packagist/l/softspring/cms-mate-extension?style=flat-square)](https://github.com/softspring/cms-mate-extension/blob/6.0/LICENSE)
-[![PHP Version](https://img.shields.io/packagist/dependency-v/softspring/cms-mate-extension/php?style=flat-square)](https://github.com/softspring/cms-mate-extension/blob/6.0/composer.json)
+[![License](https://img.shields.io/packagist/l/softspring/cms-mate-extension?style=flat-square)](https://github.com/softspring/cms-mate-extension/blob/6.1/LICENSE)
+[![PHP Version](https://img.shields.io/packagist/dependency-v/softspring/cms-mate-extension/php?style=flat-square)](https://github.com/softspring/cms-mate-extension/blob/6.1/composer.json)
 [![Downloads](https://img.shields.io/packagist/dt/softspring/cms-mate-extension?style=flat-square)](https://packagist.org/packages/softspring/cms-mate-extension)
-[![CI](https://img.shields.io/github/actions/workflow/status/softspring/cms-mate-extension/ci.yml?branch=6.0&style=flat-square&label=CI)](https://github.com/softspring/cms-mate-extension/actions/workflows/ci.yml)
-[![Coverage](https://img.shields.io/codecov/c/github/softspring/cms-mate-extension?branch=6.0&style=flat-square)](https://app.codecov.io/gh/softspring/cms-mate-extension/tree/6.0)
+[![CI](https://img.shields.io/github/actions/workflow/status/softspring/cms-mate-extension/ci.yml?branch=6.1&style=flat-square&label=CI)](https://github.com/softspring/cms-mate-extension/actions/workflows/ci.yml)
+[![Coverage](https://img.shields.io/codecov/c/github/softspring/cms-mate-extension?branch=6.1&style=flat-square)](https://app.codecov.io/gh/softspring/cms-mate-extension/tree/6.1)
 
 > **Experimental package:** this extension is in active development and its tool contracts, configuration, and extension points may change before a stable release.
 
@@ -16,12 +16,12 @@ It lets local AI agents inspect configured CMS content types, search CMS content
 
 ## Documentation
 
-Armonic usage documentation for this experimental package is planned for `6.1@dev`.
+Read the [experimental cms-mate-extension guide](https://armonic.softspring.es/6.1@dev/docs/components/cms-mate-extension).
 
 ## Installation
 
 ```bash
-composer require softspring/cms-mate-extension:^6.0@dev
+composer require softspring/cms-mate-extension:6.1.*@dev
 ```
 
 The extension requires `softspring/cms-bundle`, Doctrine ORM, and Symfony AI Mate.
