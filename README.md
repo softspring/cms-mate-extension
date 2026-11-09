@@ -16,7 +16,7 @@ It lets local AI agents inspect configured CMS content types, search CMS content
 
 ## Documentation
 
-[Armonic documentation](https://armonic.softspring.es/6.0/components/cms-mate-extension)
+Armonic usage documentation for this experimental package is planned for `6.1@dev`.
 
 ## Installation
 
